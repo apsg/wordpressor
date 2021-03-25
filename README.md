@@ -1,4 +1,4 @@
-# :package_description
+# Wordpressor - wordpress data accessor for PHP/Laravel
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/apsg/wordpressor.svg?style=flat-square)](https://packagist.org/packages/apsg/wordpressor)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/apsg/wordpressor/run-tests?label=tests)](https://github.com/apsg/wordpressor/actions?query=workflow%3ATests+branch%3Amaster)
