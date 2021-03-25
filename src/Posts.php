@@ -35,7 +35,7 @@ class Posts
 
     public function page(int $number) : self
     {
-        $this->setAttribute('page', $number);
+        return $this->setAttribute('page', $number);
     }
 
     public function next() : self

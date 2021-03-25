@@ -2,6 +2,7 @@
 namespace Apsg\Wordpressor\DTO;
 
 use Apsg\Wordpressor\Wordpressor;
+use Carbon\Carbon;
 use stdClass;
 
 /**
@@ -21,6 +22,16 @@ class Post
         return object_get($this->data, 'id');
     }
 
+    public function slug() : string
+    {
+        return object_get($this->data, 'slug');
+    }
+
+    public function date() : Carbon
+    {
+        return Carbon::parse(object_get($this->data, 'date'));
+    }
+
     public function title() : string
     {
         return object_get($this->data, 'title.rendered');
@@ -31,7 +42,7 @@ class Post
         return object_get($this->data, 'excerpt.rendered');
     }
 
-    public function contect() : string
+    public function content() : string
     {
         return object_get($this->data, 'content.rendered');
     }
