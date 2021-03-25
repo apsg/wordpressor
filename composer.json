@@ -50,7 +50,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "WordpressorServiceProvider"
+                "Apsg\\Wordpressor\\WordpressorServiceProvider"
             ],
             "aliases": {
                 "Wordpressor": "WordpressorFacade"
