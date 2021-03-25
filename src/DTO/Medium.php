@@ -1,7 +1,6 @@
 <?php
 namespace Apsg\Wordpressor\DTO;
 
-use Illuminate\Support\Str;
 use stdClass;
 
 class Medium

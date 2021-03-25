@@ -2,7 +2,6 @@
 namespace Apsg\Wordpressor\DTO;
 
 use Apsg\Wordpressor\Wordpressor;
-use Illuminate\Support\Arr;
 use stdClass;
 
 /**
