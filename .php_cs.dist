@@ -39,5 +39,6 @@ return PhpCsFixer\Config::create()
             'keep_multiple_spaces_after_comma' => true,
         ],
         'single_trait_insert_per_statement' => true,
+        'no_multiline_whitespace_around_double_arrow' => false
     ])
     ->setFinder($finder);

@@ -12,9 +12,9 @@ class Posts
     protected string $url;
 
     protected array $attributes = [
-        'order' => 'desc',
-        'orderby' => 'date',
-        'page' => 1,
+        'order'    => 'desc',
+        'orderby'  => 'date',
+        'page'     => 1,
         'per_page' => 10,
     ];
 
