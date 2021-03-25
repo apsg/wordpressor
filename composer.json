@@ -1,23 +1,24 @@
 {
-    "name": ":vendor_name/:package_name",
-    "description": ":package_description",
+    "name": "apsg/wordpressor",
+    "description": "Wordpress accessor for Laravel",
     "keywords": [
-        ":vendor_name",
-        ":package_name"
+        "apsg",
+        "wordpressor"
     ],
-    "homepage": "https://github.com/:vendor_name/:package_name",
+    "homepage": "https://github.com/apsg/wordpressor",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
+            "name": "Szymon Gackowski",
+            "email": "szymon@gackowski.edu.pl",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.0",
-        "spatie/laravel-package-tools": "^1.4.3",
-        "illuminate/contracts": "^8.0"
+        "php": "^7.4",
+        "guzzlehttp/guzzle": "^7.3",
+        "illuminate/contracts": "^8.0",
+        "spatie/laravel-package-tools": "^1.4.3"
     },
     "require-dev": {
         "brianium/paratest": "^6.2",
@@ -29,13 +30,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Skeleton\\": "src",
-            "Spatie\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Apsg\\Wordpressor\\": "src",
+            "Apsg\\Wordpressor\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Skeleton\\Tests\\": "tests"
+            "Apsg\\Wordpressor\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -49,10 +50,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\Skeleton\\SkeletonServiceProvider"
+                "WordpressorServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "Spatie\\Skeleton\\SkeletonFacade"
+                "Wordpressor": "WordpressorFacade"
             }
         }
     },

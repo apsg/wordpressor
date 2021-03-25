@@ -1,10 +1,9 @@
 <?php
+namespace Apsg\Wordpressor\Tests;
 
-namespace Spatie\Skeleton\Tests;
-
+use Apsg\Wordpressor\WordpressorServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Spatie\Skeleton\SkeletonServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -20,7 +19,7 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            SkeletonServiceProvider::class,
+            WordpressorServiceProvider::class,
         ];
     }
 
