@@ -3,6 +3,7 @@ namespace Apsg\Wordpressor\DTO;
 
 use Apsg\Wordpressor\Wordpressor;
 use Carbon\Carbon;
+use GuzzleHttp\Exception\ClientException;
 use stdClass;
 
 /**
@@ -47,8 +48,21 @@ class Post
         return object_get($this->data, 'content.rendered');
     }
 
-    public function image() : Medium
+    /**
+     * @return Medium|null
+     */
+    public function image()
     {
-        return (new Wordpressor)->media()->getTransformed(object_get($this->data, 'featured_media'));
+        $id = object_get($this->data, 'featured_media');
+
+        if (empty($id)) {
+            return null;
+        }
+
+        try {
+            return (new Wordpressor)->media()->getTransformed($id);
+        } catch (ClientException $exception) {
+            return null;
+        }
     }
 }
