@@ -10,7 +10,7 @@ class ClearCacheCommand extends Command
     protected $signature = 'wordpressor:clear';
     protected $description = 'Clear Wordpressor\'s cache, i.e. after new post was added';
 
-    public function fire()
+    public function handle()
     {
         Cache::tags([CacheHelper::PREFIX])->clear();
 

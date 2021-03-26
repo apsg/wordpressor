@@ -9,7 +9,7 @@ class PrecacheCommand extends Command
     protected $name = 'wordpressor:cache';
     protected $description = 'Precache Wordpressor for faster access of Wordpress resources';
 
-    public function fire()
+    public function handle()
     {
         $wp = (new Wordpressor());
 
