@@ -46,7 +46,5 @@ class ExampleTest extends TestCase
 
         // then
         $this->assertTrue($post instanceof Post);
-
-        dd($post->image());
     }
 }
