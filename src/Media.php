@@ -23,11 +23,13 @@ class Media
     {
         if ($this->shouldCache) {
             return Cache::tags([CacheHelper::PREFIX])
-                ->remember(CacheHelper::PREFIX . static::CACHE_PREFIX . $id,
+                ->remember(
+                    CacheHelper::PREFIX . static::CACHE_PREFIX . $id,
                     CacheHelper::TTL,
                     function () use ($id) {
                         return $this->getRaw($id);
-                    });
+                    }
+                );
         }
 
         return $this->getRaw($id);
