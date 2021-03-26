@@ -1,12 +1,15 @@
 <?php
 namespace Apsg\Wordpressor;
 
+use Apsg\Wordpressor\Commands\ClearCacheCommand;
+use Apsg\Wordpressor\Commands\PrecacheCommand;
+use Apsg\Wordpressor\Commands\RefreshCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class WordpressorServiceProvider extends PackageServiceProvider
 {
-    public function configurePackage(Package $package): void
+    public function configurePackage(Package $package) : void
     {
         /*
          * This class is a Package Service Provider
@@ -15,6 +18,11 @@ class WordpressorServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('wordpressor')
-            ->hasConfigFile();
+            ->hasConfigFile()
+            ->hasCommands([
+                ClearCacheCommand::class,
+                PrecacheCommand::class,
+                RefreshCommand::class,
+            ]);
     }
 }

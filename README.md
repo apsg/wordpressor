@@ -15,17 +15,11 @@ You can install the package via composer:
 composer require apsg/wordpressor
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --provider="Apsg\Wordpressor\WordpressorServiceProvider" --tag="wordpressor-migrations"
-php artisan migrate
-```
-
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --provider="Apsg\Wordpressor\WordpressorServiceProvider" --tag="wordpressor-config"
+php artisan vendor:publish --tag=wordpressor-config
+
 ```
 
 This is the contents of the published config file:
