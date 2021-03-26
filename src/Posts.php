@@ -17,9 +17,9 @@ class Posts
     protected bool $shouldCache;
 
     protected array $attributes = [
-        'order' => 'desc',
-        'orderby' => 'date',
-        'page' => 1,
+        'order'    => 'desc',
+        'orderby'  => 'date',
+        'page'     => 1,
         'per_page' => 10,
     ];
 
@@ -59,14 +59,13 @@ class Posts
     public function get() : array
     {
         if ($this->shouldCache) {
-            return Cache::tags([CacheHelper::PREFIX])
-                ->remember(
-                    CacheHelper::PREFIX . static::CACHE_PREFIX . $this->hash(),
-                    CacheHelper::TTL,
-                    function () {
-                        return $this->getRaw();
-                    }
-                );
+            return Cache::remember(
+                CacheHelper::PREFIX . static::CACHE_PREFIX . $this->hash(),
+                CacheHelper::TTL,
+                function () {
+                    return $this->getRaw();
+                }
+            );
         }
 
         return $this->getRaw();
