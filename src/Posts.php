@@ -49,7 +49,7 @@ class Posts
         return $this->setAttribute('page', $this->attributes['page'] + 1);
     }
 
-    protected function setAttribute(string $attribute, string $value) : self
+    protected function setAttribute(string $attribute, $value) : self
     {
         $this->attributes[$attribute] = $value;
 
