@@ -53,7 +53,7 @@
                 "Apsg\\Wordpressor\\WordpressorServiceProvider"
             ],
             "aliases": {
-                "Wordpressor": "WordpressorFacade"
+                "Wordpressor": "Apsg\\Wordpressor\\WordpressorFacade"
             }
         }
     },
